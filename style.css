@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #444;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    width: 600px;
+    margin: 10px auto;
+    border: 3px solid #fff;
+    background-color: #fff;
+    
+}
+.images{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 3px;
+    
+}
+.images img{
+    cursor: pointer;
+
+}
+
+@keyframes fadeIn{
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in{
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+
+@media (max-width: 600px){
+    .images{
+        grid-template-columns: repeat(2, auto)
+    }
+    .container{
+        width:100%;
+    }
+}
